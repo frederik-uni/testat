@@ -1,11 +1,12 @@
 :root {
-    --main-bg-color: brown;
-    --main-primary-color: green;
-    --secondary-fg-color: white;
+    --main-bg-color: #fffff3;
+    --main-primary-color: #FF4858;
+    --secondary-fg-color: rgb(89, 84, 251);
     --nav-bar-height: 50px;
 }
 
 body {
+    background: var(--main-bg-color);
     margin: 0;
     padding: 0;
 }
@@ -42,12 +43,13 @@ body {
 
 .nav li {
     float: left;
+    font-weight: 700;
     line-height: 50px;
     height: var(--nav-bar-height);
 }
 
 .nav li:hover {
-    color: var(--secondary-fg-color);
+    background: var(--secondary-fg-color);
 }
 
 .nav li a {
@@ -58,7 +60,7 @@ body {
 }
 
 .nav li a:hover {
-    color: black;
+    color: var(--main-bg-color);
 }
 
 .container {
@@ -141,5 +143,5 @@ footer p {
 }
 
 footer .unimportant {
-    color: rgb(150, 150, 150);
+    color: #747F7F
 }
