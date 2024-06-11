@@ -13,6 +13,8 @@ footer .links img{
     height: 40px;
 }
 footer {
+    position: fixed;
+    bottom: 0;
     background: var(--main-primary-color);
 }
 
