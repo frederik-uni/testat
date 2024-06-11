@@ -8,7 +8,7 @@ let expanded = false;
 const CARS = [
     {
         "name": "Citroen Ami Coupe",
-        "url": "#",
+        "url": "https://www.lingscars.com/personal-car-leasing/citroen/ami-coupe/4454733-6.3-6kW-kWh-Ami-6.3kWh-(8bhp)-Coupe-2dr-Electric-Automatic",
         "detail": "6.3 6kW kWh Ami 6.3kWh (8bhp) Coupe 2dr Electric Automatic",
         "img": "https://images.lingscars.com/car_images/citroen_ami/transparent.png",
         "price": 173,
@@ -17,9 +17,25 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/seat_ibiza/transparent.png",
         "name": "Seat Ibiza",
-        "url": "#",
+        "url": "https://www.lingscars.com/personal-car-leasing/seat/ibiza/4410361-1.0-TSI-FR-(95bhp)-Hatchback-5dr-Petrol-Manual",
         "detail": "1.0 TSI FR (95bhp) Hatchback 5dr Petrol Manual",
-        "price": 744,
+        "price": 248,
+        "duration": 36
+    },
+    {
+        "img": "https://images.lingscars.com/car_images/vw_golf_2024/transparent.png",
+        "name": "VW Golf",
+        "url": "https://www.lingscars.com/personal-car-leasing/vw/golf/4442346-1.5-TSI-Match-(115bhp)-Hatchback-5dr-Petrol-Manual",
+        "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
+        "price": 263,
+        "duration": 24
+    },
+    {
+        "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
+        "name": "Nissan Leaf",
+        "url": "https://www.lingscars.com/personal-car-leasing/nissan/leaf/4455440-110kW-Tekna-39kWh-(150bhp)-Hatchback-5dr-Electric-Automatic",
+        "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
+        "price": 270,
         "duration": 36
     },
     {
@@ -27,47 +43,31 @@ const CARS = [
         "name": "VW Golf",
         "url": "#",
         "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
-        "price": 1578,
+        "price": 263,
         "duration": 24
     },
     {
-        "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
-        "name": "Nissan Leaf",
-        "url": "#",
-        "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
-        "price": 810,
-        "duration": 36
-    },
-    {
-        "img": "https://images.lingscars.com/car_images/vw_golf_2024/transparent.png",
-        "name": "VW Golf",
-        "url": "#",
-        "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
-        "price": 1578,
-        "duration": 24
-    },
-    {
-        "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
-        "name": "Nissan Leaf",
-        "url": "#",
-        "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
-        "price": 810,
+        "img": "https://images.lingscars.com/car_images/cupra_born/transparent.png",
+        "name": "Cupra Born",
+        "url": "https://www.lingscars.com/personal-car-leasing/cupra/born/4468152-150kW-V1-58kWh-Hatchback-5dr-Electric-Automatic",
+        "detail": "150kW V1 58kWh Hatchback 5dr Electric Automatic",
+        "price": 351,
         "duration": 36
     },
     {
         "img": "https://images.lingscars.com/car_images/mg_mg3/transparent.png",
         "name": "Mg MG3",
-        "url": "#",
+        "url": "https://www.lingscars.com/personal-car-leasing/mg/mg3/4455223-1.5-Hybrid-SE-Hatchback-5dr-Petrol-electric-Automatic",
         "detail": "1.5 Hybrid SE Hatchback 5dr Petrol/electric Automatic",
-        "price": 915,
+        "price": 305,
         "duration": 24
     },
     {
         "img": "https://images.lingscars.com/car_images/nissan_qashqai_new/transparent.png",
         "name": "Nissan Qashqai",
-        "url": "#",
+        "url": "https://www.lingscars.com/personal-car-leasing/nissan/qashqai/4457102-1.5-E-Power-N-Connecta-[Glass-Roof]-(190bhp)-Hatchback-5dr-Petrol-electric-Hybrid-Automatic",
         "detail": "1.5 E-Power N-Connecta [Glass Roof] (190bhp) Hatchback 5dr Petrol/electric Hybrid Automatic",
-        "price": 1932,
+        "price": 322,
         "duration": 36
     }
 ];
