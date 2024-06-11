@@ -1,12 +1,55 @@
 :root {
     --main-bg-color: brown;
     --main-primary-color: green;
-
+    --secondary-fg-color: white;
+    --nav-bar-height: 50px;
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+.nav {
+    background: var(--main-primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+.nav .right {
+    height: var(--nav-bar-height);
+    margin-right: 10px;
+}
+.nav .left {
+    height: var(--nav-bar-height);
+}
+
+.nav .left img {
+    margin: 10px;
+    height: calc(100% - 20px);
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    float: left;
+    line-height: 50px;
+    height: var(--nav-bar-height);
+}
+
+.nav li:hover {
+    background: white;
+}
+
+.nav li a {
+    color: var(--secondary-fg-color);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav li a:hover {
+    color: black;
 }
 
 footer .links img{
