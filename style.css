@@ -97,7 +97,6 @@ body {
     margin-right: auto;
 }
 
-
 .flex-container .right {
     width: 200px;
 }
@@ -119,9 +118,8 @@ body {
 }
 
 .more {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    float: right;
+    margin: 20px 20px 0 0;
 }
 
 .car-item img {
