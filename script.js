@@ -8,6 +8,7 @@ let expanded = false;
 const CARS = [
     {
         "name": "Citroen Ami Coupe",
+        "url": "#",
         "detail": "6.3 6kW kWh Ami 6.3kWh (8bhp) Coupe 2dr Electric Automatic",
         "img": "https://images.lingscars.com/car_images/citroen_ami/transparent.png",
         "price": 173,
@@ -16,6 +17,7 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/seat_ibiza/transparent.png",
         "name": "Seat Ibiza",
+        "url": "#",
         "detail": "1.0 TSI FR (95bhp) Hatchback 5dr Petrol Manual",
         "price": 744,
         "duration": 36
@@ -23,6 +25,7 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/vw_golf_2024/transparent.png",
         "name": "VW Golf",
+        "url": "#",
         "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
         "price": 1578,
         "duration": 24
@@ -30,6 +33,7 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
         "name": "Nissan Leaf",
+        "url": "#",
         "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
         "price": 810,
         "duration": 36
@@ -37,6 +41,7 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/mg_mg3/transparent.png",
         "name": "Mg MG3",
+        "url": "#",
         "detail": "1.5 Hybrid SE Hatchback 5dr Petrol/electric Automatic",
         "price": 915,
         "duration": 24
@@ -44,6 +49,7 @@ const CARS = [
     {
         "img": "https://images.lingscars.com/car_images/nissan_qashqai_new/transparent.png",
         "name": "Nissan Qashqai",
+        "url": "#",
         "detail": "1.5 E-Power N-Connecta [Glass Roof] (190bhp) Hatchback 5dr Petrol/electric Hybrid Automatic",
         "price": 1932,
         "duration": 36
@@ -51,20 +57,23 @@ const CARS = [
 ];
 
 window.onload = () => {
-    setSpecialOffer(0);
+    setSpecialOffer(+offer_count);
     setFav();
-    setLastDelivered([3, 3, 4]);
-    document.querySelector(".more").onclick = () => {
+    setLastDelivered([2, 4, 2]);
+    const button = document.querySelector(".more");
+    button.onclick = () => {
         if (expanded) {
+            button.innerText = "More";
             undoFavExpand()
         } else {
+            button.innerText = "Less";
             setFavExpand()
         }
         expanded = !expanded;
     };
     setInterval(() => {
-        setSpecialOffer(+offer_count);
         offer_count = !offer_count;
+        setSpecialOffer(+offer_count);
     }, UPDATE_SPECIAL_OFFER)
 }
 
@@ -76,7 +85,8 @@ function setSpecialOffer(index) {
 }
 
 function generateCar(car) {
-    let carContainer = document.createElement("div");
+    let carContainer = document.createElement("a");
+    carContainer.href = car.url;
     carContainer.className = "car-item";
     let img = document.createElement("img");
     img.src = car.img;

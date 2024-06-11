@@ -91,6 +91,8 @@ body {
 }
 
 .car-item {
+    text-decoration: none;
+    color: black;
     width: 200px;
 }
 
