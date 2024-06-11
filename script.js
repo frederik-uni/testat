@@ -54,7 +54,7 @@ window.onload = () => {
     setSpecialOffer(0);
     setFav();
     setLastDelivered([3, 3, 4]);
-    document.querySelector("").onclick = () => {
+    document.querySelector(".more").onclick = () => {
         if (expanded) {
             undoFavExpand()
         } else {
@@ -106,7 +106,7 @@ function setFavExpand() {
 
 function undoFavExpand() {
     let node = document.querySelector(".fav");
-    for (const [index, node] of Array.of(node.children).entries()) {
+    for ([index, node] of Array.of(node.children).entries()) {
         if (index > 3) {
             node.remove();
         }
