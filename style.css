@@ -47,7 +47,7 @@ body {
 }
 
 .nav li:hover {
-    background: white;
+    color: var(--secondary-fg-color);
 }
 
 .nav li a {
