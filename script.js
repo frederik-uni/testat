@@ -39,6 +39,22 @@ const CARS = [
         "duration": 36
     },
     {
+        "img": "https://images.lingscars.com/car_images/vw_golf_2024/transparent.png",
+        "name": "VW Golf",
+        "url": "#",
+        "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
+        "price": 1578,
+        "duration": 24
+    },
+    {
+        "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
+        "name": "Nissan Leaf",
+        "url": "#",
+        "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
+        "price": 810,
+        "duration": 36
+    },
+    {
         "img": "https://images.lingscars.com/car_images/mg_mg3/transparent.png",
         "name": "Mg MG3",
         "url": "#",
@@ -59,7 +75,7 @@ const CARS = [
 window.onload = () => {
     setSpecialOffer(+offer_count);
     setFav();
-    setLastDelivered([2, 4, 2]);
+    setLastDelivered([2, 6, 2]);
     const button = document.querySelector(".more");
     button.onclick = () => {
         if (expanded) {
