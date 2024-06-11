@@ -54,12 +54,14 @@ body {
 
 .nav li a {
     color: var(--secondary-fg-color);
+    text-shadow: -0.5px -0.5px 0 #fffff3, 0.5px -0.5px 0 #fffff3, -0.5px 0.5px 0 #fffff3, 0.5px 0.5px 0 #fffff3;
     text-decoration: none;
     padding: 10px;
     text-align: center;
 }
 
 .nav li a:hover {
+    text-shadow: none;
     color: var(--main-bg-color);
 }
 
