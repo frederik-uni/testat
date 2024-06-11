@@ -87,9 +87,16 @@ body {
 }
 
 .flex-container .center {
+    position: relative;
     width: calc(100% - 400px - 24px);
     margin: 0 12px;
 }
+.flex-container .center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .flex-container .right {
     width: 200px;
@@ -109,6 +116,12 @@ body {
     text-align: center;
     background: rgb(235, 230, 230, 1);
     border-radius: 10px;
+}
+
+.more {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .car-item img {
