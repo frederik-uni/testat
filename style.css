@@ -94,6 +94,7 @@ body {
 .flex-container .right {
     width: 200px;
 }
+
 .offer, .last_delivered {
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
@@ -143,7 +144,11 @@ footer .links {
     margin-right: auto;
 }
 
-footer .links a {
+footer .links .icon {
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
     margin: 5px 10px 0;
 }
 
