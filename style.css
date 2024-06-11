@@ -172,4 +172,9 @@ footer .unimportant {
     .flex-container .center {
         width: 100%;
     }
+    .last_delivered {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        gap: 10px;
+    }
 }
