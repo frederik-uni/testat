@@ -1,8 +1,9 @@
 /**
  * Anzahl der Sekunden bis sich das Sonderangebot ändert
  */
-const UPDATE_SPECIAL_OFFER = 3600*1000;
+const UPDATE_SPECIAL_OFFER = 3600 * 1000;
 let offer_count = true;
+let expanded = false;
 
 const CARS = [
     {
@@ -17,40 +18,50 @@ const CARS = [
         "name": "Seat Ibiza",
         "detail": "1.0 TSI FR (95bhp) Hatchback 5dr Petrol Manual",
         "price": 744,
-        "duration":36
+        "duration": 36
     },
     {
         "img": "https://images.lingscars.com/car_images/vw_golf_2024/transparent.png",
         "name": "VW Golf",
         "detail": "1.5 TSI Match (115bhp) Hatchback 5dr Petrol Manual",
         "price": 1578,
-        "duration":24
+        "duration": 24
     },
     {
         "img": "https://images.lingscars.com/car_images/nissan_leaf/transparent.png",
         "name": "Nissan Leaf",
         "detail": "110kW Tekna 39kWh (150bhp) Hatchback 5dr Electric Automatic",
         "price": 810,
-        "duration":36
+        "duration": 36
     },
     {
         "img": "https://images.lingscars.com/car_images/mg_mg3/transparent.png",
         "name": "Mg MG3",
         "detail": "1.5 Hybrid SE Hatchback 5dr Petrol/electric Automatic",
         "price": 915,
-        "duration":24
+        "duration": 24
     },
     {
         "img": "https://images.lingscars.com/car_images/nissan_qashqai_new/transparent.png",
         "name": "Nissan Qashqai",
         "detail": "1.5 E-Power N-Connecta [Glass Roof] (190bhp) Hatchback 5dr Petrol/electric Hybrid Automatic",
         "price": 1932,
-        "duration":36
+        "duration": 36
     }
 ];
 
 window.onload = () => {
     setSpecialOffer(0);
+    setFav();
+    setLastDelivered([3, 3, 4]);
+    document.querySelector("").onclick = () => {
+        if (expanded) {
+            undoFavExpand()
+        } else {
+            setFavExpand()
+        }
+        expanded = !expanded;
+    };
     setInterval(() => {
         setSpecialOffer(+offer_count);
         offer_count = !offer_count;
@@ -74,10 +85,36 @@ function generateCar(car) {
     let detail = document.createElement("p");
     detail.innerText = car.detail;
     let price = document.createElement("p");
-    price.innerText = car.price +"£ over "+ car.duration +"month";
+    price.innerText = car.price + "£ over " + car.duration + "month";
     carContainer.appendChild(img)
     carContainer.appendChild(name);
     carContainer.appendChild(detail);
     carContainer.appendChild(price);
     return carContainer;
+}
+
+function setFav() {
+    let node = document.querySelector(".fav");
+    node.innerHTML = "";
+    CARS.slice(0, 4).forEach(item => node.appendChild(generateCar(item)))
+}
+
+function setFavExpand() {
+    let node = document.querySelector(".fav");
+    CARS.slice(4).forEach(item => node.appendChild(generateCar(item)))
+}
+
+function undoFavExpand() {
+    let node = document.querySelector(".fav");
+    for (const [index, node] of Array.of(node.children).entries()) {
+        if (index > 3) {
+            node.remove();
+        }
+    }
+}
+
+function setLastDelivered(items) {
+    let node = document.querySelector(".last_delivered");
+    node.innerHTML = "";
+    items.forEach(item => node.appendChild(generateCar(CARS[item])))
 }
