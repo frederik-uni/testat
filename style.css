@@ -1,0 +1,36 @@
+:root {
+    --main-bg-color: brown;
+    --main-primary-color: green;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer .links img{
+    height: 40px;
+}
+footer {
+    background: var(--main-primary-color);
+}
+
+footer .links {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer .links a {
+    margin: 10px;
+}
+footer p {
+    font-size: x-small;
+    text-align: center;
+    margin: 2px;
+
+}
+footer .unimportant {
+    color: rgb(150, 150, 150);
+}
