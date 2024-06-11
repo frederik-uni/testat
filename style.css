@@ -51,7 +51,22 @@ body {
 .nav li a:hover {
     color: black;
 }
+.car-item {
+    width: 200px;
+}
 
+.car-item img {
+    width: 100%;
+}
+.car-item p {
+    margin: 0;
+    font-size: small;
+
+}
+.car-item p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: medium;
+}
 footer .links img{
     height: 40px;
 }
