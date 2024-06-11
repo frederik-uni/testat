@@ -106,7 +106,7 @@ function setFavExpand() {
 
 function undoFavExpand() {
     let node = document.querySelector(".fav");
-    for ([index, node] of Array.of(node.children).entries()) {
+    for ([index, node] of Array.from(node.children).entries()) {
         if (index > 3) {
             node.remove();
         }
