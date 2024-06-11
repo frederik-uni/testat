@@ -147,3 +147,29 @@ footer p {
 footer .unimportant {
     color: #747F7F
 }
+
+@media screen and (max-width: 800px) {
+    .nav .left {
+        width: 0;
+    }
+
+    .nav .left img {
+        width: 0;
+    }
+
+    .flex-container {
+        display: block;
+    }
+
+    .flex-container .left {
+        width: 100%;
+    }
+
+    .flex-container .right {
+        width: 100%;
+    }
+
+    .flex-container .center {
+        width: 100%;
+    }
+}
